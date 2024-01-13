@@ -1,5 +1,7 @@
 # Robotic-Piano-Player
 
-https://youtu.be/aeWdHynBX10
+[![Robotic Piano Player]
+(https://i9.ytimg.com/vi_webp/aeWdHynBX10/mq2.webp?sqp=CJyujK0G-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgWShLMA8=&rs=AOn4CLC0VVDK9QMJ5O4WsxOxDenrAmgwxQ)]// Thumbnail
+((https://youtu.be/aeWdHynBX10)"Robotic Piano Player")    // Video Link
 
 The motivation of the project was to be able to emulate the functionality of a human playing the piano, mimicking the two "hands" of a human as well. We created this two hand structure by having two modules that move independently on two different belt drive linear actuators. The right hand plays three octaves and the left hand plays two octaves. Each hand is composed of 12 DC doorlock actuators which act as the fingers, and which are turned on and off by using I2C signals from GPIO expanders. These hands are then housed on custom 3D printed structures to hold all of the actuators in an exact and precise manner over the keys. Finally, the project has an LCD functionality which plays the music, as well as stops in and returns the hands to "home" position. The music files are downloaded and processed in a custom python script which decodes them, and is sent over USB to UART to the STM32. The data is then preprocessed within the firmware, optimizing the hand positions by grouping notes together, looking for movement opportunities, and overall making the system as efficient as possible. There is also speaker functionality (see below for further description). 
