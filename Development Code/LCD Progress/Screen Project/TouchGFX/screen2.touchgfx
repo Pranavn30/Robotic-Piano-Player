@@ -1,0 +1,213 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Screen1",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "Width": 320,
+            "Height": 240,
+            "RelativeFilename": "__generated\\alternate_theme_images_backgrounds_320x240_poly.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1",
+            "X": 91,
+            "Y": 154,
+            "Width": 138,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_text_off_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_rounded_text_on_action.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\rounded_action_text.json"
+          },
+          {
+            "Type": "BoxWithBorder",
+            "Name": "boxWithBorder1",
+            "Y": 15,
+            "Width": 320,
+            "Height": 95,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "BorderColor": {
+              "Red": 107,
+              "Green": 104,
+              "Blue": 104
+            },
+            "BorderSize": 5
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 30,
+            "Y": 52,
+            "Width": 516,
+            "Height": 20,
+            "TextId": "__SingleUse_URAD",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_6R3J",
+              "UseBuffer": true,
+              "BufferSize": 53
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": -550,
+              "Y": 52,
+              "Easing": "Linear",
+              "EasingOption": "Out",
+              "Duration": 10000,
+              "ActionComponent": "textArea1"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 600
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 270,
+              "Y": 52,
+              "Easing": "Linear",
+              "EasingOption": "Out",
+              "Duration": 1,
+              "ActionComponent": "textArea1"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "CustomContainer1",
+        "X": 26,
+        "Y": 17,
+        "Width": 268,
+        "Height": 95,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 10,
+            "Y": 35,
+            "Width": 516,
+            "Height": 20,
+            "LockPosition": true,
+            "TextId": "__SingleUse_COKC",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "__SingleUse_KM1J",
+              "UseBuffer": true,
+              "BufferSize": 53
+            }
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": -550,
+              "Y": 35,
+              "Easing": "Quad",
+              "EasingOption": "Out",
+              "Duration": 10000,
+              "ActionComponent": "textArea1"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 600
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 270,
+              "Y": 35,
+              "Easing": "Linear",
+              "EasingOption": "Out",
+              "Duration": 1,
+              "ActionComponent": "textArea1"
+            }
+          }
+        ]
+      }
+    ],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 320,
+      "Height": 240
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 320,
+        "Height": 240
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32L4",
+    "SubFamily": "STM32L4R5/S5",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m4",
+    "ProjectFile": "../screen2.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": []
+  },
+  "Version": "4.22.1"
+}
